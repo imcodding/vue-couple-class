@@ -1,0 +1,233 @@
+/*=== Common ===*/
+body {
+  margin:0;
+  font-size: 14px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+}
+h1,h2,h3,h4,h5,h6 { 
+  padding: 10px; 
+  margin: 0;
+  font-weight: 500;
+}
+h4 {
+  font-size: 15px;
+}
+input { 
+  border: 1px solid #b4b4b4; 
+  border-radius: 3px; 
+  height: 21px;
+  line-height: 1.5;
+  /* padding: 0; */
+}
+button {
+  box-sizing: content-box;
+  height: 20px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+}
+/* From Uiverse.io by halitgurpinar */ 
+.radio-input input {
+  display: none;
+}
+
+.radio-input {
+  --container_width: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  color: #333;
+  width: var(--container_width);
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+}
+
+.radio-input label {
+  width: 100%;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  letter-spacing: -1px;
+  font-size: 12px;
+}
+
+.selection {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--container_width) / 2);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: 0.15s ease;
+}
+
+.radio-input label:nth-child(1):has(input:checked) ~ .selection {
+  background-color: #b2dbfa;
+  display: inline-block;
+}
+.radio-input label:nth-child(2):has(input:checked) ~ .selection {
+  background-color: pink;
+  display: inline-block;
+}
+.radio-input label:nth-child(1):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 0 / 2));
+}
+
+.radio-input label:nth-child(2):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 1 / 2));
+}
+
+/*=== App ===*/
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app-header ul {
+  margin: 10px;
+}
+.app-header li {
+  display: inline-block;
+  /* background-color: #FFDC2B; */
+  background-color: #eeeeee;
+  color: #333;
+  font-weight: 500;
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.app-header li:hover {
+  opacity: 0.9;
+}
+/*=== CoupleContainer ===*/
+.couple-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.couple-content {
+  flex: 1;
+  display: flex;
+}
+.couple-content-list {
+  border: 1px solid #e2e2e2;
+}
+.couple-content-list h3 {
+  border-bottom: 1px solid #eeeeee;
+  background-color: #f8f8f8;
+}
+/*=== CoupleList ===*/
+.couple-list {}
+/*=== CoupleClass ===*/
+.couple-list-new {
+  display: flex;
+  padding: 0 10px 10px 10px;
+}
+.couple-list-new input {
+  flex: 1;
+  margin: 0 5px;
+}
+.couple-list-box {
+  display: flex;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  border-right: none;
+}
+.couple-list-box div {
+  flex:1
+}
+.couple-list-box span {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+.couple-list-box span:first-child {
+  border-right: 1px solid #eee;
+}
+.couple-list-box ul {
+  padding: 5px
+}
+/*=== CoupleExclude ===*/
+.couple-list-ex {
+  
+}
+.couple-list-ex-new {
+  display: flex;
+  padding: 0 10px 10px 10px;
+}
+.couple-list-ex input {
+  flex: 1;
+  margin-left: 5px;
+}
+.couple-list-ex button {
+  margin-left: 5px;
+}
+/*=== CoupleSeat ===*/
+.couple-content-seat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.couple-content-seat h3 {
+  border: 1px solid #e2e2e2;
+  border-left: none;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #f8f8f8;
+}
+.couple-content-box  {
+  display: flex;
+  flex: 1;
+}
+.couple-seat-info {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e2e2;
+  padding: 10px;
+}
+.couple-seat-info h4 {
+  padding: 0 0 10px 0;
+}
+.couple-seat-info-sub {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.couple-seat-info-sub input {
+  margin-right: 5px;
+  width: 30px;
+}
+.couple-seat-info button {
+  margin-top: auto;
+  height: 40px;
+}
+.couple-seat-desk {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  flex: 1;
+}
+.couple-seat-desk button {
+  margin-top: auto;
+  height: 40px;
+}

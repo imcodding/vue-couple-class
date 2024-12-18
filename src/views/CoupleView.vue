@@ -1,5 +1,5 @@
 <template>
-  <div>CoupleView</div>
+  <couple-container></couple-container>
 </template>
 
 <script>
@@ -9,4 +9,5 @@ export default {
 </script>
 
 <script setup>
+import CoupleContainer from '../components/CoupleContainer.vue';
 </script>
