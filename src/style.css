@@ -176,9 +176,14 @@ button:hover {
   display: flex;
   padding: 0 10px 10px 10px;
 }
-.couple-list-ex input {
+.couple-list-ex select {
   flex: 1;
   margin-left: 5px;
+  border: 1px solid #b4b4b4;
+  border-radius: 3px;
+  box-sizing: content-box;
+  height: 21px;
+  padding: 1px;
 }
 .couple-list-ex button {
   margin-left: 5px;
@@ -230,4 +235,9 @@ button:hover {
 .couple-seat-desk button {
   margin-top: auto;
   height: 40px;
+}
+
+.couple-seat-desk table td {
+  border: 1px solid #b4b4b4;
+  padding: 20px
 }
