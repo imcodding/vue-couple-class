@@ -21,7 +21,8 @@ export const useStorage = () => {
 
   const loadDeskInfo = (initDeskInfo) => {
     let defaultValue = {gender: 'M', boyNum: 1, girlNum: 1}
-    const info = JSON.parse(localStorage.getItem("deskInfo" || defaultValue))
+    let info = JSON.parse(localStorage.getItem("deskInfo" || defaultValue))
+    if(!info) info = defaultValue
     initDeskInfo(info)
   }
 
